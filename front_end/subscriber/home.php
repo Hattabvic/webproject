@@ -259,24 +259,40 @@ $assets = "../../assets";
                             <p class="card-text"><?= $posts['content'] ?></p>
                             <p class="card-text">
                                 <small class="text-muted">Published on <?= date('F j, Y, g:i a', strtotime($posts['created_at'])) ?></small>
-                            <div>
-
-                                
-                                <button type="button" class="btn btn-outline-primary btn-sm" onclick="changeLikeCount(<?= $posts['id'] ?>, 1)">
-                                    <i class="far fa-thumbs-up"></i> Like
-                                </button>
-                                <button type="button" class="btn btn-outline-secondary btn-sm" onclick="changeLikeCount(<?= $posts['id'] ?>, -1)">
-                                    <i class="far fa-thumbs-down"></i> Dislike
-                                </button>
-                                <span id="like-count-<?= $posts['id'] ?>">0</span>
-                                <script>
-                                    function changeLikeCount(postId, change) {
-                                        var countElement = document.getElementById('like-count-' + postId);
-                                        var currentCount = parseInt(countElement.textContent);
-                                        var newCount = currentCount + change;
-                                        countElement.textContent = newCount >= 0 ? newCount : 0;
-                                    }
-                                </script>
+                            <div class="action">
+                                <?php
+                                if (!empty($user->myLike($posts["id"], $user->id))) {
+                                ?>
+                                    <a style="color:red" role="button" href="handle_like.php ?post_id=<?= $posts["id"] ?> & like=no" class="btn btn-primary btn-lg btn-floating">
+                                        <i class="bi bi-heart-fill"></i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
+                                        </svg>
+                                        <span>Like</span>
+                                    </a>
+                                <?php
+                                } else {
+                                ?>
+                                    <a style="color:darkseagreen" role="button" href="handle_like.php?post_id=<?= $posts["id"] ?> & like=yes" class="btn btn-primary btn-lg btn-floating">
+                                        <i class="bi bi-heart"></i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                        </svg>
+                                        <span>Like</span>
+                                    </a>
+                                <?php
+                                }
+                                ?>
+                            </div>
+                            <div class="action">
+                                <a role="button" href="All_like.php ?post_id=<?= $posts["id"] ?>" class="btn btn-primary btn-lg btn-floating">
+                                    <i class="bi bi-clipboard2-pulse-fill"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-pulse-fill" viewBox="0 0 16 16">
+                                        <path d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5" />
+                                        <path d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585q.084.236.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5q.001-.264.085-.5M9.98 5.356 11.372 10h.128a.5.5 0 0 1 0 1H11a.5.5 0 0 1-.479-.356l-.94-3.135-1.092 5.096a.5.5 0 0 1-.968.039L6.383 8.85l-.936 1.873A.5.5 0 0 1 5 11h-.5a.5.5 0 0 1 0-1h.191l1.362-2.724a.5.5 0 0 1 .926.08l.94 3.135 1.092-5.096a.5.5 0 0 1 .968-.039Z" />
+                                    </svg>
+                                </a>
+                                <span>Likes</span>
                             </div>
                             </p>
                             <!-- <div class="d-flex justify-content-between align-items-center">

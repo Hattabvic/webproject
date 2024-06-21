@@ -49,25 +49,20 @@ on delete cascade
 on update cascade
 );
 
-
+alter table users add column is_banned tinyint(1) default 0;
 alter table users add role enum('subscriber','admin') default 'subscriber' after phone;
 desc users;
 
 alter table users add column image varchar(255);
 
--- alter table comments add likes int default 0;
--- alter table users add likes int default 0;
 
--- alter table users add column is_banned tinyint(1) default 0;
-
--- create table if not exists likes (
---     id int auto_increment primary key,
---     user_id int,
---     post_id int,
---     created_at timestamp default current_timestamp,
---     constraint fk_user_id_likes_users foreign key (user_id) references users(id) on delete cascade on update cascade,
---     constraint fk_post_id_likes_posts foreign key (post_id) references posts(id) on delete cascade on update cascade,
---     unique key unique_like (user_id, post_id) 
--- );
-
-
+  create table if not exists likes (
+      id int auto_increment primary key,
+      user_id int,
+      post_id int,
+      love enum ('yes','no'),
+	created_at timestamp default current_timestamp,
+     constraint fk_user_id_likes_users foreign key (user_id) references users(id) on delete cascade on update cascade,
+      constraint fk_post_id_likes_posts foreign key (post_id) references posts(id) on delete cascade on update cascade,
+      unique key unique_like (user_id, post_id) 
+  );

@@ -168,8 +168,8 @@
 
   <main class="form-signin w-100 m-auto">
     <form action="handel_login.php" method="post">
-    <img class="mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa8c9xhIDBoAvZULeyeArLCvUujoKZN0mc5WRa8bPEVCGJCK3NZNRhNNdH7vjv4QSNlMA&usqp=CAU" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      <img class="mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa8c9xhIDBoAvZULeyeArLCvUujoKZN0mc5WRa8bPEVCGJCK3NZNRhNNdH7vjv4QSNlMA&usqp=CAU" alt="" width="72" height="57">
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
       <?php
       if (!empty($_GET['msg_login']) && $_GET['msg_login'] == 'al') {
       ?>
@@ -199,27 +199,22 @@
             var url = new URL(window.location.href);
             url.searchParams.delete('msg_login');
             window.location.href = url.href;
-          }, 5000);
+          }, 3000);
         </script>
       <?php
       }
       ?>
-      <small style="color: #6528e0;"> <?php if (isset($_SESSION['errors']['email'])) echo  $_SESSION['errors']['email'] ?></small>
+      </b><small style="color: crimson;"> <?php if (isset($_SESSION['errors']['email'])) echo  $_SESSION['errors']['email'] ?></small></b>
       <div class="form-floating">
         <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
         <label for="floatingInput">Email address</label>
       </div>
-      <small style="color: #6528e0;"> <?php if (isset($_SESSION['errors']['password'])) echo  $_SESSION['errors']['password'] ?></small>
+      </b><small style="color: crimson;"> <?php if (isset($_SESSION['errors']['password'])) echo  $_SESSION['errors']['password'] ?></small></b>
       <div class="form-floating">
         <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
         <label for="floatingPassword">Password</label>
       </div>
-
-      <div class="form-check text-start my-3">
-        <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Remember me
-        </label>
+      
       </div>
       <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
       <p class="other-page">Don't have an account? <a class="other-page-link" href="register.php">Sign Up</a></p>
