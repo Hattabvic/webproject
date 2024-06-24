@@ -4,7 +4,7 @@ require_once('../../classes.php');
 require_once('header.php');
 $user = unserialize($_SESSION["user"]);
 $homePosts = $user->home_post();
-$my_posts = $user->myposts($user->id);
+// $my_posts = $user->myposts($user->id);
 
 $assets = "../../assets";
 // var_dump($homePosts);
@@ -19,8 +19,9 @@ $assets = "../../assets";
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>Album example · Bootstrap v5.3</title>
+    <title>Home</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
 
@@ -107,6 +108,441 @@ $assets = "../../assets";
         .bd-mode-toggle .dropdown-menu .active .bi {
             display: block !important;
         }
+
+
+
+
+
+        /* Component: Mini Profile Widget */
+        .mini-profile-widget .image-container .avatar {
+            width: 180px;
+            height: 180px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+            background: white;
+            padding: 4px;
+            border: 1px solid #dddddd;
+        }
+
+        .mini-profile-widget .details {
+            text-align: center;
+        }
+
+
+
+        /* Component: Panel */
+        .panel {
+            border-radius: 0;
+            margin-bottom: 30px;
+        }
+
+        .panel.solid-color {
+            color: white;
+        }
+
+        .panel .panel-heading {
+            border-radius: 0;
+            position: relative;
+        }
+
+        .panel .panel-heading>.controls {
+            position: absolute;
+            right: 10px;
+            top: 12px;
+        }
+
+        .panel .panel-heading>.controls .nav.nav-pills {
+            margin: -8px 0 0 0;
+        }
+
+        .panel .panel-heading>.controls .nav.nav-pills li a {
+            padding: 5px 8px;
+        }
+
+        .panel .panel-heading .clickable {
+            margin-top: 0px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .panel .panel-heading.no-heading-border {
+            border-bottom-color: transparent;
+        }
+
+        .panel .panel-heading .left {
+            float: left;
+        }
+
+        .panel .panel-heading .right {
+            float: right;
+        }
+
+        .panel .panel-title {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        .panel .panel-title.panel-title-sm {
+            font-size: 18px;
+            line-height: 28px;
+        }
+
+        .panel .panel-title.panel-title-lg {
+            font-size: 24px;
+            line-height: 34px;
+        }
+
+        .panel .panel-body {
+            font-size: 13px;
+        }
+
+        .panel .panel-body>.body-section {
+            margin: 0px 0px 20px;
+        }
+
+        .panel .panel-body>.body-section>.section-heading {
+            margin: 0px 0px 5px;
+            font-weight: bold;
+        }
+
+        .panel .panel-body>.body-section>.section-content {
+            margin: 0px 0px 10px;
+        }
+
+        .panel-white {
+            border: 1px solid #dddddd;
+        }
+
+        .panel-white>.panel-heading {
+            color: #333;
+            background-color: #fff;
+            border-color: #ddd;
+        }
+
+        .panel-white>.panel-footer {
+            background-color: #fff;
+            border-color: #ddd;
+        }
+
+        .panel-primary {
+            border: 1px solid #dddddd;
+        }
+
+        .panel-purple {
+            border: 1px solid #dddddd;
+        }
+
+        .panel-purple>.panel-heading {
+            color: #fff;
+            background-color: #8e44ad;
+            border: none;
+        }
+
+        .panel-purple>.panel-heading .panel-title a:hover {
+            color: #f0f0f0;
+        }
+
+        .panel-light-purple {
+            border: 1px solid #dddddd;
+        }
+
+        .panel-light-purple>.panel-heading {
+            color: #fff;
+            background-color: #9b59b6;
+            border: none;
+        }
+
+        .panel-light-purple>.panel-heading .panel-title a:hover {
+            color: #f0f0f0;
+        }
+
+        .panel-blue,
+        .panel-info {
+            border: 1px solid #dddddd;
+        }
+
+        .panel-blue>.panel-heading,
+        .panel-info>.panel-heading {
+            color: #fff;
+            background-color: #2980b9;
+            border: none;
+        }
+
+        .panel-blue>.panel-heading .panel-title a:hover,
+        .panel-info>.panel-heading .panel-title a:hover {
+            color: #f0f0f0;
+        }
+
+        .panel-light-blue {
+            border: 1px solid #dddddd;
+        }
+
+        .panel-light-blue>.panel-heading {
+            color: #fff;
+            background-color: #3498db;
+            border: none;
+        }
+
+        .panel-light-blue>.panel-heading .panel-title a:hover {
+            color: #f0f0f0;
+        }
+
+        .panel-green,
+        .panel-success {
+            border: 1px solid #dddddd;
+        }
+
+        .panel-green>.panel-heading,
+        .panel-success>.panel-heading {
+            color: #fff;
+            background-color: #27ae60;
+            border: none;
+        }
+
+        .panel-green>.panel-heading .panel-title a:hover,
+        .panel-success>.panel-heading .panel-title a:hover {
+            color: #f0f0f0;
+        }
+
+        .panel-light-green {
+            border: 1px solid #dddddd;
+        }
+
+        .panel-light-green>.panel-heading {
+            color: #fff;
+            background-color: #2ecc71;
+            border: none;
+        }
+
+        .panel-light-green>.panel-heading .panel-title a:hover {
+            color: #f0f0f0;
+        }
+
+        .panel-orange,
+        .panel-warning {
+            border: 1px solid #dddddd;
+        }
+
+        .panel-orange>.panel-heading,
+        .panel-warning>.panel-heading {
+            color: #fff;
+            background-color: #e82c0c;
+            border: none;
+        }
+
+        .panel-orange>.panel-heading .panel-title a:hover,
+        .panel-warning>.panel-heading .panel-title a:hover {
+            color: #f0f0f0;
+        }
+
+        .panel-light-orange {
+            border: 1px solid #dddddd;
+        }
+
+        .panel-light-orange>.panel-heading {
+            color: #fff;
+            background-color: #ff530d;
+            border: none;
+        }
+
+        .panel-light-orange>.panel-heading .panel-title a:hover {
+            color: #f0f0f0;
+        }
+
+        .panel-red,
+        .panel-danger {
+            border: 1px solid #dddddd;
+        }
+
+        .panel-red>.panel-heading,
+        .panel-danger>.panel-heading {
+            color: #fff;
+            background-color: #d40d12;
+            border: none;
+        }
+
+        .panel-red>.panel-heading .panel-title a:hover,
+        .panel-danger>.panel-heading .panel-title a:hover {
+            color: #f0f0f0;
+        }
+
+        .panel-light-red {
+            border: 1px solid #dddddd;
+        }
+
+        .panel-light-red>.panel-heading {
+            color: #fff;
+            background-color: #ff1d23;
+            border: none;
+        }
+
+        .panel-light-red>.panel-heading .panel-title a:hover {
+            color: #f0f0f0;
+        }
+
+        .panel-pink {
+            border: 1px solid #dddddd;
+        }
+
+        .panel-pink>.panel-heading {
+            color: #fff;
+            background-color: #fe31ab;
+            border: none;
+        }
+
+        .panel-pink>.panel-heading .panel-title a:hover {
+            color: #f0f0f0;
+        }
+
+        .panel-light-pink {
+            border: 1px solid #dddddd;
+        }
+
+        .panel-light-pink>.panel-heading {
+            color: #fff;
+            background-color: #fd32c0;
+            border: none;
+        }
+
+        .panel-light-pink>.panel-heading .panel-title a:hover {
+            color: #f0f0f0;
+        }
+
+        .panel-group .panel {
+            border-radius: 0;
+        }
+
+        .panel-group .panel+.panel {
+            margin-top: 0;
+            border-top: 0;
+        }
+
+        /* Component: Posts */
+        .post .post-heading {
+            height: 95px;
+            padding: 20px 15px;
+        }
+
+        .post .post-heading .avatar {
+            width: 60px;
+            height: 60px;
+            display: block;
+            margin-right: 15px;
+        }
+
+        .post .post-heading .meta .title {
+            margin-bottom: 0;
+        }
+
+        .post .post-heading .meta .title a {
+            color: black;
+        }
+
+        .post .post-heading .meta .title a:hover {
+            color: #aaaaaa;
+        }
+
+        .post .post-heading .meta .time {
+            margin-top: 8px;
+            color: #999;
+        }
+
+        .post .post-image .image {
+            width: 100%;
+            height: auto;
+        }
+
+        .post .post-description {
+            padding: 15px;
+        }
+
+        .post .post-description p {
+            font-size: 14px;
+        }
+
+        .post .post-description .stats {
+            margin-top: 20px;
+        }
+
+        .post .post-description .stats .stat-item {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .post .post-description .stats .stat-item .icon {
+            margin-right: 8px;
+        }
+
+        .post .post-footer {
+            border-top: 1px solid #ddd;
+            padding: 15px;
+        }
+
+        .post .post-footer .input-group-addon a {
+            color: #454545;
+        }
+
+        .post .post-footer .comments-list {
+            padding: 0;
+            margin-top: 20px;
+            list-style-type: none;
+        }
+
+        .post .post-footer .comments-list .comment {
+            display: block;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .post .post-footer .comments-list .comment .avatar {
+            width: 35px;
+            height: 35px;
+        }
+
+        .post .post-footer .comments-list .comment .comment-heading {
+            display: block;
+            width: 100%;
+        }
+
+        .post .post-footer .comments-list .comment .comment-heading .user {
+            font-size: 14px;
+            font-weight: bold;
+            display: inline;
+            margin-top: 0;
+            margin-right: 10px;
+        }
+
+        .post .post-footer .comments-list .comment .comment-heading .time {
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 0;
+            display: inline;
+        }
+
+        .post .post-footer .comments-list .comment .comment-body {
+            margin-left: 50px;
+        }
+
+        .post .post-footer .comments-list .comment>.comments-list {
+            margin-left: 50px;
+        }
+
+        .fluid-width-video-wrapper {
+            width: 100%;
+            position: relative;
+            padding: 0;
+        }
+
+        .fluid-width-video-wrapper iframe,
+        .fluid-width-video-wrapper object,
+        .fluid-width-video-wrapper embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 
 
@@ -174,163 +610,90 @@ $assets = "../../assets";
     </div>
 
 
-    <!-- <header data-bs-theme="dark">
-        <div class="collapse text-bg-dark" id="navbarHeader">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8 col-md-7 py-4">
-                        <h4>About</h4>
-                        <p class="text-body-secondary">Add some information about the album below, the author, or any
-                            other background context. Make it a few sentences long so folks can pick up some informative
-                            tidbits. Then, link them off to some social networking sites or contact information.</p>
-                    </div>
-                    <div class="col-sm-4 offset-md-1 py-4">
-                        <h4>Contact</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                            <li><a href="#" class="text-white">Like on Facebook</a></li>
-                            <li><a href="#" class="text-white">Email me</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="navbar navbar-dark bg-dark shadow-sm">
-            <div class="container">
-                <a href="#" class="navbar-brand d-flex align-items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2"
-                        viewBox="0 0 24 24">
-                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
-                        <circle cx="12" cy="13" r="4" />
-                    </svg>
-                    <strong>Album</strong>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
-                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </div>
-    </header> -->
-
     <main>
-
-        <section class="py-5 text-center container">
-            <div class="row py-lg-5">
-                <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">Hello <?= $user->first_name ?></h1>
-                </div>
-            </div>
-        </section>
-        <div class="album py-5 bg-body-tertiary">
-            <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <?php
-                    foreach ($homePosts as $posts) {
-                    ?>
-                </div>
-
-                <div class="col-6 offset-3 bg-info mt-5 rounded-2">
-                    <div class="card shadow-sm">
-                        <div class="d-flex flex-row align-items-center">
-                            <div class="d-flex flex-row align-items-center">
-
-                                <img style="border-radius: 50%;" src="<?= empty($posts['user_image']) ? 'https://t4.ftcdn.net/jpg/02/34/57/59/240_F_234575931_hDnNJiXNgTzJO4iDDZjhneWKF25o7O2f.jpg' : $posts['user_image']; ?>" alt="avatar" width="25" height="25" />
+        <div class="container">
+            <div class="row">
+                <?php foreach ($homePosts as $posts) : ?>
+                    <div class="col-sm-12">
+                        <div class="panel panel-white post">
+                            <div class="post-heading">
+                                <div class="pull-left image">
+                                    <img style="border-radius: 50%;" src="<?= empty($posts['user_image']) ? 'https://t4.ftcdn.net/jpg/02/34/57/59/240_F_234575931_hDnNJiXNgTzJO4iDDZjhneWKF25o7O2f.jpg' : $posts['user_image']; ?>" alt="avatar" width="25" height="25" />
+                                </div>
+                                <div class="pull-left meta">
+                                    <div class="title h5">
+                                        <he class="mb-0"><?= $posts["first_name"] ?><?= " " . $posts["last_name"] ?></h6> <br>
+                                    </div>
+                                    <h6 class="text-muted time"> <span><?= $posts["created_at"] ?></span></h6>
+                                </div>
                             </div>
-                            <div class="ms-2 c-details">
-                                <he class="mb-0"><?= $posts["first_name"]  ?><?= " " . $posts["last_name"] ?></h6> <br> <span><?= $posts["created_at"] ?></span>
+                            <div class="post-image">
+                                <?php if (!empty($posts['image'])) : ?>
+                                    <img class="card-img-top" src="<?= $posts['image'] ?>" alt="title" style="max-height: 900px; object-fit: contain; width: 100%;" />
+                                <?php endif; ?>
                             </div>
-                        </div>
-                        <?php
-                        if (!empty($posts['image'])) {
-
-                        ?>
-                            <img class="card-img-top" src="<?= $posts['image'] ?>" alt="title" style="max-height: 900px; object-fit: cover;" />
-                        <?php
-                        }
-                        ?>
-                        <div class="card-body">
-
-                            <h4 class="card-title"><?= $posts['title'] ?>
-
-
-                            </h4>
-                            <p class="card-text"><?= $posts['content'] ?></p>
-                            <p class="card-text">
-                                <small class="text-muted">Published on <?= date('F j, Y, g:i a', strtotime($posts['created_at'])) ?></small>
-                            <div class="action">
-                                <?php
-                                if (!empty($user->myLike($posts["id"], $user->id))) {
-                                ?>
-                                    <a style="color:red" role="button" href="handle_like.php ?post_id=<?= $posts["id"] ?> & like=no" class="btn btn-primary btn-lg btn-floating">
-                                        <i class="bi bi-heart-fill"></i>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
+                            <div class="card-body">
+                                <h4 class="card-title"><?= $posts['title'] ?></h4>
+                                <p class="card-text"><?= $posts['content'] ?></p>
+                                <p class="card-text">
+                                    <small class="text-muted">Published on <?= date('F j, Y, g:i a', strtotime($posts['created_at'])) ?></small>
+                                </p>
+                            </div>
+                            <div class="post-description">
+                                <div class="stats">
+                                    <?php if (!empty($user->myLike($posts["id"], $user->id))) : ?>
+                                        <a style="color:red" role="button" href="handle_like_home.php?post_id=<?= $posts["id"] ?>&like=no" class="btn btn-primary btn-lg btn-floating">
+                                            <i class="bi bi-heart-fill"></i>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
+                                            </svg>
+                                            <span>Like</span>
+                                        </a>
+                                    <?php else : ?>
+                                        <a style="color:darkseagreen" role="button" href="handle_like_home.php?post_id=<?= $posts["id"] ?>&like=yes" class="btn btn-primary btn-lg btn-floating">
+                                            <i class="bi bi-heart"></i>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                            </svg>
+                                            <span>Like</span>
+                                        </a>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="action">
+                                    <a role="button" href="All_like.php?post_id=<?= $posts["id"] ?>" class="btn btn-primary btn-lg btn-floating">
+                                        <i class="bi bi-clipboard2-pulse-fill"></i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-pulse-fill" viewBox="0 0 16 16">
+                                            <path d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5" />
+                                            <path d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585q.084.236.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5q.001-.264.085-.5M9.98 5.356 11.372 10h.128a.5.5 0 0 1 0 1H11a.5.5 0 0 1-.479-.356l-.94-3.135-1.092 5.096a.5.5 0 0 1-.968.039L6.383 8.85l-.936 1.873A.5.5 0 0 1 5 11h-.5a.5.5 0 0 1 0-1h.191l1.362-2.724a.5.5 0 0 1 .926.08l.94 3.135 1.092-5.096a.5.5 0 0 1 .968-.039Z" />
                                         </svg>
-                                        <span>Like</span>
                                     </a>
-                                <?php
-                                } else {
-                                ?>
-                                    <a style="color:darkseagreen" role="button" href="handle_like.php?post_id=<?= $posts["id"] ?> & like=yes" class="btn btn-primary btn-lg btn-floating">
-                                        <i class="bi bi-heart"></i>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                                            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                                        </svg>
-                                        <span>Like</span>
-                                    </a>
-                                <?php
-                                }
-                                ?>
+                                    <span>Likes</span>
+                                </div>
                             </div>
-                            <div class="action">
-                                <a role="button" href="All_like.php ?post_id=<?= $posts["id"] ?>" class="btn btn-primary btn-lg btn-floating">
-                                    <i class="bi bi-clipboard2-pulse-fill"></i>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-pulse-fill" viewBox="0 0 16 16">
-                                        <path d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5" />
-                                        <path d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585q.084.236.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5q.001-.264.085-.5M9.98 5.356 11.372 10h.128a.5.5 0 0 1 0 1H11a.5.5 0 0 1-.479-.356l-.94-3.135-1.092 5.096a.5.5 0 0 1-.968.039L6.383 8.85l-.936 1.873A.5.5 0 0 1 5 11h-.5a.5.5 0 0 1 0-1h.191l1.362-2.724a.5.5 0 0 1 .926.08l.94 3.135 1.092-5.096a.5.5 0 0 1 .968-.039Z" />
-                                    </svg>
-                                </a>
-                                <span>Likes</span>
-                            </div>
-                            </p>
-                            <!-- <div class="d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn btn-primary rounded-pill like-btn">
-                                    <i class="bi bi-hand-thumbs-up-fill text-white"></i> Like
-                            </div> -->
-                            
-                        </div>
-                        <div class="row d-flex justify-content-center">
-                            <div class="col-md-8 col-lg-6">
-                                <div class="card shadow-0 border" style="background-color: #f0f2f5;">
-                                    <div class="card-body p-4">
-                                        <form action="store_comment_home.php" method="post">
-                                         
-
-                                                 <div data-mdb-input-init class="form-outline mb-4">
-                                            <input type="text" name="comment" id="addANote" class="form-control" placeholder="Type comment..." />      
-                                            <input type="hidden" name="post_id" value="<?= $posts['id'] ?>">
-                                            <button type="submit" class="btn btn-primary mt-3 ms-2">+ Comment</button>
-                                            </div>
-                                           
-                                        </form>
-                                        <?php
-                                        $comments = $user->get_post_comment($posts["id"]);
-                                        // var_dump($comments);
-                                        foreach ($comments as $comment) {
-                                        ?>
-
+                            <div class="post-footer">
+                                <div class="input-group">
+                                    <form action="store_comment_home.php" method="post" id="commentForm">
+                                        <input class="form-control" name="comment" placeholder="Add a comment" type="text">
+                                        <span class="input-group-addon">
+                                            <button type="submit" class="btn btn-primary">Add</button>
+                                        </span>
+                                        <input type="hidden" name="post_id" value="<?= $posts['id'] ?>">
+                                    </form>
+                                </div>
+                                <ul class="comments-list">
+                                    <?php
+                                    $comments = $user->get_post_comment($posts["id"]);
+                                    foreach ($comments as $comment) :
+                                    ?>
+                                        <li class="comment">
                                             <div class="card mb-4">
                                                 <div class="card-body">
                                                     <p><?= $comment["comment"] ?></p>
-
                                                     <div class="d-flex justify-content-between">
                                                         <div class="d-flex flex-row align-items-center">
-                                                            <img style="border-radius: 50%;" src="<?php echo empty($comment['image']) ? 'https://t4.ftcdn.net/jpg/02/34/57/59/240_F_234575931_hDnNJiXNgTzJO4iDDZjhneWKF25o7O2f.jpg' : $comment['image']; ?>" alt="avatar" width="25" height="25" />
+                                                            <img style="border-radius: 50%;" src="<?= empty($comment['image']) ? 'https://t4.ftcdn.net/jpg/02/34/57/59/240_F_234575931_hDnNJiXNgTzJO4iDDZjhneWKF25o7O2f.jpg' : $comment['image']; ?>" alt="avatar" width="25" height="25" />
                                                             <p class="small mb-0 ms-2"><?= $comment["first_name"] . " " . $comment["last_name"] ?></p>
                                                         </div>
-
                                                         <div class="d-flex flex-row align-items-center">
                                                             <i class="far fa-thumbs-up mx-2 fa-xs text-body" style="margin-top: -0.16rem;"></i>
                                                             <p class="small text-muted mb-0"><?= $comment["created_at"] ?></p>
@@ -338,24 +701,15 @@ $assets = "../../assets";
                                                     </div>
                                                 </div>
                                             </div>
-                                        <?php
-                                        }
-                                        ?>
-                                    </div>
-                                </div>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                </div>
+                <?php endforeach; ?>
             </div>
-        <?php
-                    }
-        ?>
-
         </div>
-        </div>
-        </div>
-
     </main>
 
 

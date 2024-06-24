@@ -1,8 +1,8 @@
 <?php
 
- require_once("../../classes.php");
-if (empty($user=unserialize($_SESSION["user"]))) {
-     header("location:../../index.php?msg=filed_authentcation");
+require_once("../../classes.php");
+if (empty($user = unserialize($_SESSION["user"]))) {
+    header("location:../../index.php?msg=filed_authentcation");
 }
 $assets = "../../assets";
 
@@ -110,24 +110,41 @@ $assets = "../../assets";
 
 </head>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="home.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="profile.php">profile</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <a name="" id="" class="btn btn-danger" href="../../handel_logout.php?msg=logout" role="button">Logout</a>
-                    <a name="" id="" class="btn btn-danger" href="../../handel_logout.php?msg=sing_in_account" role="button">Sign-in</a>
-                    <a name="" id="" class="btn btn-danger" href="../../handel_logout.php?msg=login_account" role="button">Login</a>
-                </form>
-            </div>
+    <div class="collapse navbar-collapse" id="navbarButtonsExample">
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link text-lg" href="home.php">
+                    <h4>Home</h4>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="profile.php">
+                    <h4>Profile</h4>
+                </a>
+            </li>
+        </ul>
+        <!-- Left links -->
+
+        <!-- Middle section with user's name -->
+        <div class="d-flex align-items-center mx-auto">
+            <span class="navbar-text me-3">
+                <h4>Hello, <?= $user->first_name ?>
+            </span>
+            </h5>
         </div>
-    </nav>
+
+        <!-- Right-aligned Logout button -->
+        <div class="d-flex align-items-center">
+            <a type="button" href="../../handel_logout.php?msg=logout" data-mdb-ripple-init type="button" class="btn btn-danger me-3">
+                Logout
+            </a>
+        </div>
+    </div>
+    <!-- Collapsible wrapper -->
+    </div>
+
+</nav>
 
 
 

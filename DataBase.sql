@@ -1,5 +1,5 @@
 
-drop database blog;
+-- drop database blog;
 
 create database if not exists blog;
 use blog;
