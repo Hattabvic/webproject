@@ -613,7 +613,7 @@ $assets = "../../assets";
     <main>
         <div class="container">
             <div class="row">
-                <?php foreach ($homePosts as $posts) : ?>
+                <?php foreach ($homePosts as $posts) {  ?>
                     <div class="col-sm-12">
                         <div class="panel panel-white post">
                             <div class="post-heading">
@@ -624,13 +624,14 @@ $assets = "../../assets";
                                     <div class="title h5">
                                         <he class="mb-0"><?= $posts["first_name"] ?><?= " " . $posts["last_name"] ?></h6> <br>
                                     </div>
+
                                     <h6 class="text-muted time"> <span><?= $posts["created_at"] ?></span></h6>
                                 </div>
                             </div>
                             <div class="post-image">
-                                <?php if (!empty($posts['image'])) : ?>
+                                <?php if (!empty($posts['image'])) { ?>
                                     <img class="card-img-top" src="<?= $posts['image'] ?>" alt="title" style="max-height: 900px; object-fit: contain; width: 100%;" />
-                                <?php endif; ?>
+                                <?php } ?>
                             </div>
                             <div class="card-body">
                                 <h4 class="card-title"><?= $posts['title'] ?></h4>
@@ -641,7 +642,7 @@ $assets = "../../assets";
                             </div>
                             <div class="post-description">
                                 <div class="stats">
-                                    <?php if (!empty($user->myLike($posts["id"], $user->id))) : ?>
+                                    <?php if (!empty($user->myLike($posts["id"], $user->id))) {  ?>
                                         <a style="color:red" role="button" href="handle_like_home.php?post_id=<?= $posts["id"] ?>&like=no" class="btn btn-primary btn-lg btn-floating">
                                             <i class="bi bi-heart-fill"></i>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
@@ -649,7 +650,8 @@ $assets = "../../assets";
                                             </svg>
                                             <span>Like</span>
                                         </a>
-                                    <?php else : ?>
+                                    <?php } else
+                                    {  ?>
                                         <a style="color:darkseagreen" role="button" href="handle_like_home.php?post_id=<?= $posts["id"] ?>&like=yes" class="btn btn-primary btn-lg btn-floating">
                                             <i class="bi bi-heart"></i>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
@@ -657,7 +659,7 @@ $assets = "../../assets";
                                             </svg>
                                             <span>Like</span>
                                         </a>
-                                    <?php endif; ?>
+                                    <?php } ?>
                                 </div>
                                 <div class="action">
                                     <a role="button" href="All_like.php?post_id=<?= $posts["id"] ?>" class="btn btn-primary btn-lg btn-floating">
@@ -683,7 +685,7 @@ $assets = "../../assets";
                                 <ul class="comments-list">
                                     <?php
                                     $comments = $user->get_post_comment($posts["id"]);
-                                    foreach ($comments as $comment) :
+                                    foreach ($comments as $comment) {
                                     ?>
                                         <li class="comment">
                                             <div class="card mb-4">
@@ -702,12 +704,12 @@ $assets = "../../assets";
                                                 </div>
                                             </div>
                                         </li>
-                                    <?php endforeach; ?>
+                                    <?php } ?>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                <?php endforeach; ?>
+                <?php } ?>
             </div>
         </div>
     </main>
