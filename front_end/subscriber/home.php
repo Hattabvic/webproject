@@ -131,418 +131,7 @@ $assets = "../../assets";
 
 
 
-        /* Component: Panel */
-        .panel {
-            border-radius: 0;
-            margin-bottom: 30px;
-        }
-
-        .panel.solid-color {
-            color: white;
-        }
-
-        .panel .panel-heading {
-            border-radius: 0;
-            position: relative;
-        }
-
-        .panel .panel-heading>.controls {
-            position: absolute;
-            right: 10px;
-            top: 12px;
-        }
-
-        .panel .panel-heading>.controls .nav.nav-pills {
-            margin: -8px 0 0 0;
-        }
-
-        .panel .panel-heading>.controls .nav.nav-pills li a {
-            padding: 5px 8px;
-        }
-
-        .panel .panel-heading .clickable {
-            margin-top: 0px;
-            font-size: 12px;
-            cursor: pointer;
-        }
-
-        .panel .panel-heading.no-heading-border {
-            border-bottom-color: transparent;
-        }
-
-        .panel .panel-heading .left {
-            float: left;
-        }
-
-        .panel .panel-heading .right {
-            float: right;
-        }
-
-        .panel .panel-title {
-            font-size: 16px;
-            line-height: 20px;
-        }
-
-        .panel .panel-title.panel-title-sm {
-            font-size: 18px;
-            line-height: 28px;
-        }
-
-        .panel .panel-title.panel-title-lg {
-            font-size: 24px;
-            line-height: 34px;
-        }
-
-        .panel .panel-body {
-            font-size: 13px;
-        }
-
-        .panel .panel-body>.body-section {
-            margin: 0px 0px 20px;
-        }
-
-        .panel .panel-body>.body-section>.section-heading {
-            margin: 0px 0px 5px;
-            font-weight: bold;
-        }
-
-        .panel .panel-body>.body-section>.section-content {
-            margin: 0px 0px 10px;
-        }
-
-        .panel-white {
-            border: 1px solid #dddddd;
-        }
-
-        .panel-white>.panel-heading {
-            color: #333;
-            background-color: #fff;
-            border-color: #ddd;
-        }
-
-        .panel-white>.panel-footer {
-            background-color: #fff;
-            border-color: #ddd;
-        }
-
-        .panel-primary {
-            border: 1px solid #dddddd;
-        }
-
-        .panel-purple {
-            border: 1px solid #dddddd;
-        }
-
-        .panel-purple>.panel-heading {
-            color: #fff;
-            background-color: #8e44ad;
-            border: none;
-        }
-
-        .panel-purple>.panel-heading .panel-title a:hover {
-            color: #f0f0f0;
-        }
-
-        .panel-light-purple {
-            border: 1px solid #dddddd;
-        }
-
-        .panel-light-purple>.panel-heading {
-            color: #fff;
-            background-color: #9b59b6;
-            border: none;
-        }
-
-        .panel-light-purple>.panel-heading .panel-title a:hover {
-            color: #f0f0f0;
-        }
-
-        .panel-blue,
-        .panel-info {
-            border: 1px solid #dddddd;
-        }
-
-        .panel-blue>.panel-heading,
-        .panel-info>.panel-heading {
-            color: #fff;
-            background-color: #2980b9;
-            border: none;
-        }
-
-        .panel-blue>.panel-heading .panel-title a:hover,
-        .panel-info>.panel-heading .panel-title a:hover {
-            color: #f0f0f0;
-        }
-
-        .panel-light-blue {
-            border: 1px solid #dddddd;
-        }
-
-        .panel-light-blue>.panel-heading {
-            color: #fff;
-            background-color: #3498db;
-            border: none;
-        }
-
-        .panel-light-blue>.panel-heading .panel-title a:hover {
-            color: #f0f0f0;
-        }
-
-        .panel-green,
-        .panel-success {
-            border: 1px solid #dddddd;
-        }
-
-        .panel-green>.panel-heading,
-        .panel-success>.panel-heading {
-            color: #fff;
-            background-color: #27ae60;
-            border: none;
-        }
-
-        .panel-green>.panel-heading .panel-title a:hover,
-        .panel-success>.panel-heading .panel-title a:hover {
-            color: #f0f0f0;
-        }
-
-        .panel-light-green {
-            border: 1px solid #dddddd;
-        }
-
-        .panel-light-green>.panel-heading {
-            color: #fff;
-            background-color: #2ecc71;
-            border: none;
-        }
-
-        .panel-light-green>.panel-heading .panel-title a:hover {
-            color: #f0f0f0;
-        }
-
-        .panel-orange,
-        .panel-warning {
-            border: 1px solid #dddddd;
-        }
-
-        .panel-orange>.panel-heading,
-        .panel-warning>.panel-heading {
-            color: #fff;
-            background-color: #e82c0c;
-            border: none;
-        }
-
-        .panel-orange>.panel-heading .panel-title a:hover,
-        .panel-warning>.panel-heading .panel-title a:hover {
-            color: #f0f0f0;
-        }
-
-        .panel-light-orange {
-            border: 1px solid #dddddd;
-        }
-
-        .panel-light-orange>.panel-heading {
-            color: #fff;
-            background-color: #ff530d;
-            border: none;
-        }
-
-        .panel-light-orange>.panel-heading .panel-title a:hover {
-            color: #f0f0f0;
-        }
-
-        .panel-red,
-        .panel-danger {
-            border: 1px solid #dddddd;
-        }
-
-        .panel-red>.panel-heading,
-        .panel-danger>.panel-heading {
-            color: #fff;
-            background-color: #d40d12;
-            border: none;
-        }
-
-        .panel-red>.panel-heading .panel-title a:hover,
-        .panel-danger>.panel-heading .panel-title a:hover {
-            color: #f0f0f0;
-        }
-
-        .panel-light-red {
-            border: 1px solid #dddddd;
-        }
-
-        .panel-light-red>.panel-heading {
-            color: #fff;
-            background-color: #ff1d23;
-            border: none;
-        }
-
-        .panel-light-red>.panel-heading .panel-title a:hover {
-            color: #f0f0f0;
-        }
-
-        .panel-pink {
-            border: 1px solid #dddddd;
-        }
-
-        .panel-pink>.panel-heading {
-            color: #fff;
-            background-color: #fe31ab;
-            border: none;
-        }
-
-        .panel-pink>.panel-heading .panel-title a:hover {
-            color: #f0f0f0;
-        }
-
-        .panel-light-pink {
-            border: 1px solid #dddddd;
-        }
-
-        .panel-light-pink>.panel-heading {
-            color: #fff;
-            background-color: #fd32c0;
-            border: none;
-        }
-
-        .panel-light-pink>.panel-heading .panel-title a:hover {
-            color: #f0f0f0;
-        }
-
-        .panel-group .panel {
-            border-radius: 0;
-        }
-
-        .panel-group .panel+.panel {
-            margin-top: 0;
-            border-top: 0;
-        }
-
-        /* Component: Posts */
-        .post .post-heading {
-            height: 95px;
-            padding: 20px 15px;
-        }
-
-        .post .post-heading .avatar {
-            width: 60px;
-            height: 60px;
-            display: block;
-            margin-right: 15px;
-        }
-
-        .post .post-heading .meta .title {
-            margin-bottom: 0;
-        }
-
-        .post .post-heading .meta .title a {
-            color: black;
-        }
-
-        .post .post-heading .meta .title a:hover {
-            color: #aaaaaa;
-        }
-
-        .post .post-heading .meta .time {
-            margin-top: 8px;
-            color: #999;
-        }
-
-        .post .post-image .image {
-            width: 100%;
-            height: auto;
-        }
-
-        .post .post-description {
-            padding: 15px;
-        }
-
-        .post .post-description p {
-            font-size: 14px;
-        }
-
-        .post .post-description .stats {
-            margin-top: 20px;
-        }
-
-        .post .post-description .stats .stat-item {
-            display: inline-block;
-            margin-right: 15px;
-        }
-
-        .post .post-description .stats .stat-item .icon {
-            margin-right: 8px;
-        }
-
-        .post .post-footer {
-            border-top: 1px solid #ddd;
-            padding: 15px;
-        }
-
-        .post .post-footer .input-group-addon a {
-            color: #454545;
-        }
-
-        .post .post-footer .comments-list {
-            padding: 0;
-            margin-top: 20px;
-            list-style-type: none;
-        }
-
-        .post .post-footer .comments-list .comment {
-            display: block;
-            width: 100%;
-            margin: 20px 0;
-        }
-
-        .post .post-footer .comments-list .comment .avatar {
-            width: 35px;
-            height: 35px;
-        }
-
-        .post .post-footer .comments-list .comment .comment-heading {
-            display: block;
-            width: 100%;
-        }
-
-        .post .post-footer .comments-list .comment .comment-heading .user {
-            font-size: 14px;
-            font-weight: bold;
-            display: inline;
-            margin-top: 0;
-            margin-right: 10px;
-        }
-
-        .post .post-footer .comments-list .comment .comment-heading .time {
-            font-size: 12px;
-            color: #aaa;
-            margin-top: 0;
-            display: inline;
-        }
-
-        .post .post-footer .comments-list .comment .comment-body {
-            margin-left: 50px;
-        }
-
-        .post .post-footer .comments-list .comment>.comments-list {
-            margin-left: 50px;
-        }
-
-        .fluid-width-video-wrapper {
-            width: 100%;
-            position: relative;
-            padding: 0;
-        }
-
-        .fluid-width-video-wrapper iframe,
-        .fluid-width-video-wrapper object,
-        .fluid-width-video-wrapper embed {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+ 
     </style>
 
 
@@ -611,78 +200,93 @@ $assets = "../../assets";
 
 
     <main>
-        <div class="container">
-            <div class="row">
-                <?php foreach ($homePosts as $posts) {  ?>
-                    <div class="col-sm-12">
-                        <div class="panel panel-white post">
-                            <div class="post-heading">
-                                <div class="pull-left image">
-                                    <img style="border-radius: 50%;" src="<?= empty($posts['user_image']) ? 'https://t4.ftcdn.net/jpg/02/34/57/59/240_F_234575931_hDnNJiXNgTzJO4iDDZjhneWKF25o7O2f.jpg' : $posts['user_image']; ?>" alt="avatar" width="25" height="25" />
-                                </div>
-                                <div class="pull-left meta">
-                                    <div class="title h5">
-                                        <he class="mb-0"><?= $posts["first_name"] ?><?= " " . $posts["last_name"] ?></h6> <br>
-                                    </div>
+    <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Hello, <?= $user->first_name ?></h1>
+       
+      </div>
+    </div>
+  </section>
 
-                                    <h6 class="text-muted time"> <span><?= $posts["created_at"] ?></span></h6>
-                                </div>
-                            </div>
-                            <div class="post-image">
-                                <?php if (!empty($posts['image'])) { ?>
-                                    <img class="card-img-top" src="<?= $posts['image'] ?>" alt="title" style="max-height: 900px; object-fit: contain; width: 100%;" />
-                                <?php } ?>
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title"><?= $posts['title'] ?></h4>
-                                <p class="card-text"><?= $posts['content'] ?></p>
-                                <p class="card-text">
-                                    <small class="text-muted">Published on <?= date('F j, Y, g:i a', strtotime($posts['created_at'])) ?></small>
-                                </p>
-                            </div>
-                            <div class="post-description">
-                                <div class="stats">
+        <div class="container ">
+            <div class="">
+                <?php foreach ($homePosts as $posts) {  ?>
+                    <div class="col-8 offset-2 border border-secondary-subtle rounded mb-4 shadow p-2">
+                         <div class="panel panel-white  rounded">
+                                        <div class="post-heading  m-4">
+                                            <div class="  ">
+                                                <img style="width:50px ; height: 50px; border-radius:50px;"
+                                                    src="<?php if (!empty($user->image))
+                                                        echo $user->image;
+                                                    else
+                                                        echo 'https://t4.ftcdn.net/jpg/02/34/57/59/240_F_234575931_hDnNJiXNgTzJO4iDDZjhneWKF25o7O2f.jpg' ?>">
+                                                    <h6 class="mb-0"><?= $user->first_name ?><?= " " . $user->last_name ?></h6>
+                                                <br>
+                                                <h6 class=""> <span><?= $posts["created_at"] ?></span></h6>
+                                            </div>
+
+                                        </div>
+                                        <div class="post-image mx-4 my-1">
+                                            <?php if (!empty($posts['image'])) { ?>
+                                                <img class="card-img-top rounded" src="<?= $posts['image'] ?>" alt="title"
+                                                    style="max-height: 900px; object-fit: contain; width: 100%;" />
+                                            <?php } ?>
+                                        </div>
+                                        <div class="card-body px-2">
+                                            <h4 class="card-title ps-3 mx-4"><?= $posts['title'] ?></h4>
+                                            <p class="card-text ps-4 mx-4"><?= $posts['content'] ?></p>
+                                            <p class="card-text mx-5 my-2">
+                                                <small class="text-muted">Published on
+                                                    <?= date('F j, Y, g:i a', strtotime($posts['created_at'])) ?></small>
+                                            </p>
+                                        </div>
+                                        <hr>
+                            <div class="post-description p-2 d-flex justify-content-between">
+
+                                <div class="stats ">
                                     <?php if (!empty($user->myLike($posts["id"], $user->id))) {  ?>
-                                        <a style="color:red" role="button" href="handle_like_home.php?post_id=<?= $posts["id"] ?>&like=no" class="btn btn-primary btn-lg btn-floating">
-                                            <i class="bi bi-heart-fill"></i>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
-                                            </svg>
+                                        <a style="color:" role="button" href="handle_like_home.php?post_id=<?= $posts["id"] ?>&like=no" class="btn">
+                                        
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M323.8 34.8c-38.2-10.9-78.1 11.2-89 49.4l-5.7 20c-3.7 13-10.4 25-19.5 35l-51.3 56.4c-8.9 9.8-8.2 25 1.6 33.9s25 8.2 33.9-1.6l51.3-56.4c14.1-15.5 24.4-34 30.1-54.1l5.7-20c3.6-12.7 16.9-20.1 29.7-16.5s20.1 16.9 16.5 29.7l-5.7 20c-5.7 19.9-14.7 38.7-26.6 55.5c-5.2 7.3-5.8 16.9-1.7 24.9s12.3 13 21.3 13L448 224c8.8 0 16 7.2 16 16c0 6.8-4.3 12.7-10.4 15c-7.4 2.8-13 9-14.9 16.7s.1 15.8 5.3 21.7c2.5 2.8 4 6.5 4 10.6c0 7.8-5.6 14.3-13 15.7c-8.2 1.6-15.1 7.3-18 15.2s-1.6 16.7 3.6 23.3c2.1 2.7 3.4 6.1 3.4 9.9c0 6.7-4.2 12.6-10.2 14.9c-11.5 4.5-17.7 16.9-14.4 28.8c.4 1.3 .6 2.8 .6 4.3c0 8.8-7.2 16-16 16H286.5c-12.6 0-25-3.7-35.5-10.7l-61.7-41.1c-11-7.4-25.9-4.4-33.3 6.7s-4.4 25.9 6.7 33.3l61.7 41.1c18.4 12.3 40 18.8 62.1 18.8H384c34.7 0 62.9-27.6 64-62c14.6-11.7 24-29.7 24-50c0-4.5-.5-8.8-1.3-13c15.4-11.7 25.3-30.2 25.3-51c0-6.5-1-12.8-2.8-18.7C504.8 273.7 512 257.7 512 240c0-35.3-28.6-64-64-64l-92.3 0c4.7-10.4 8.7-21.2 11.8-32.2l5.7-20c10.9-38.2-11.2-78.1-49.4-89zM32 192c-17.7 0-32 14.3-32 32V448c0 17.7 14.3 32 32 32H96c17.7 0 32-14.3 32-32V224c0-17.7-14.3-32-32-32H32z"/></svg>
                                             <span>Like</span>
                                         </a>
-                                    <?php } else
-                                    {  ?>
-                                        <a style="color:darkseagreen" role="button" href="handle_like_home.php?post_id=<?= $posts["id"] ?>&like=yes" class="btn btn-primary btn-lg btn-floating">
-                                            <i class="bi bi-heart"></i>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-                                            </svg>
+                                    <?php } else {  ?>
+                                        <a style="color:red" role="button" href="handle_like_home.php?post_id=<?= $posts["id"] ?>&like=yes" class="btn">
+                                            
+                                            
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"/></svg>
                                             <span>Like</span>
                                         </a>
                                     <?php } ?>
                                 </div>
+
                                 <div class="action">
-                                    <a role="button" href="All_like.php?post_id=<?= $posts["id"] ?>" class="btn btn-primary btn-lg btn-floating">
-                                        <i class="bi bi-clipboard2-pulse-fill"></i>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-pulse-fill" viewBox="0 0 16 16">
-                                            <path d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5" />
-                                            <path d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585q.084.236.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5q.001-.264.085-.5M9.98 5.356 11.372 10h.128a.5.5 0 0 1 0 1H11a.5.5 0 0 1-.479-.356l-.94-3.135-1.092 5.096a.5.5 0 0 1-.968.039L6.383 8.85l-.936 1.873A.5.5 0 0 1 5 11h-.5a.5.5 0 0 1 0-1h.191l1.362-2.724a.5.5 0 0 1 .926.08l.94 3.135 1.092-5.096a.5.5 0 0 1 .968-.039Z" />
+                                    <a role="button" href="All_like.php?post_id=<?= $posts["id"] ?>" class="btn">
+                                        <i class="fa-solid fa-users-between-lines"></i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="fa-solid fa-users-between-lines" viewBox="0 0 640 512">
+
+                                            <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                            <path d="M0 24C0 10.7 10.7 0 24 0H616c13.3 0 24 10.7 24 24s-10.7 24-24 24H24C10.7 48 0 37.3 0 24zM0 488c0-13.3 10.7-24 24-24H616c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24zM83.2 160a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM32 320c0-35.3 28.7-64 64-64h96c12.2 0 23.7 3.4 33.4 9.4c-37.2 15.1-65.6 47.2-75.8 86.6H64c-17.7 0-32-14.3-32-32zm461.6 32c-10.3-40.1-39.6-72.6-77.7-87.4c9.4-5.5 20.4-8.6 32.1-8.6h96c35.3 0 64 28.7 64 64c0 17.7-14.3 32-32 32H493.6zM391.2 290.4c32.1 7.4 58.1 30.9 68.9 61.6c3.5 10 5.5 20.8 5.5 32c0 17.7-14.3 32-32 32h-224c-17.7 0-32-14.3-32-32c0-11.2 1.9-22 5.5-32c10.5-29.7 35.3-52.8 66.1-60.9c7.8-2.1 16-3.1 24.5-3.1h96c7.4 0 14.7 .8 21.6 2.4zm44-130.4a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM321.6 96a80 80 0 1 1 0 160 80 80 0 1 1 0-160z" />
                                         </svg>
+                                        <span>Likes</span>
                                     </a>
-                                    <span>Likes</span>
                                 </div>
+
                             </div>
+
                             <div class="post-footer">
-                                <div class="input-group">
-                                    <form action="store_comment_home.php" method="post" id="commentForm">
+                                <div class=" ">
+                                    <form action="store_comment_home.php" method="post" id="commentForm" class=" d-flex p-4 w-full ">
                                         <input class="form-control" name="comment" placeholder="Add a comment" type="text">
                                         <span class="input-group-addon">
-                                            <button type="submit" class="btn btn-primary">Add</button>
+                                            <button type="submit" class="btn btn-lg btn-primary m-2">Add</button>
                                         </span>
                                         <input type="hidden" name="post_id" value="<?= $posts['id'] ?>">
                                     </form>
+                                    <hr>
                                 </div>
-                                <ul class="comments-list">
+                                <ul class="comments-list pe-3">
                                     <?php
                                     $comments = $user->get_post_comment($posts["id"]);
                                     foreach ($comments as $comment) {
@@ -697,7 +301,6 @@ $assets = "../../assets";
                                                             <p class="small mb-0 ms-2"><?= $comment["first_name"] . " " . $comment["last_name"] ?></p>
                                                         </div>
                                                         <div class="d-flex flex-row align-items-center">
-                                                            <i class="far fa-thumbs-up mx-2 fa-xs text-body" style="margin-top: -0.16rem;"></i>
                                                             <p class="small text-muted mb-0"><?= $comment["created_at"] ?></p>
                                                         </div>
                                                     </div>

@@ -15,11 +15,11 @@ $content = htmlspecialchars(trim($_REQUEST['content']));
 
 if (empty($errors)) {
 
-    if (isset($_FILES['image']['name'])) {
-        $imageStor =  "../../images/posts/" . $_FILES["image"]["name"];
-        move_uploaded_file($_FILES["image"]["tmp_name"], $imageStor);
+  if ($_FILES["image"]["name"]) {
+        $imageName =  "../../images/posts/" . $_FILES["image"]["name"];
+        move_uploaded_file($_FILES["image"]["tmp_name"], $imageName);
     } else {
-        $imageStor = null;
+        $imageName = null;
     }
 
     $user->postes($titel, $content, $imageStor, $user->id);

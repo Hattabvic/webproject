@@ -113,6 +113,10 @@ $assets = "../../assets";
     <div class="collapse navbar-collapse" id="navbarButtonsExample">
         <!-- Left links -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <div class="pull-left image ">
+                                    <img style="border-radius: 60%;" src="<?= empty($posts['user_image']) ? 'https://t4.ftcdn.net/jpg/02/34/57/59/240_F_234575931_hDnNJiXNgTzJO4iDDZjhneWKF25o7O2f.jpg' : $posts['user_image']; ?>" alt="avatar" width="50" height="50" />
+                                </div>
             <li class="nav-item">
                 <a class="nav-link text-lg" href="home.php">
                     <h4>Home</h4>
@@ -126,13 +130,6 @@ $assets = "../../assets";
         </ul>
         <!-- Left links -->
 
-        <!-- Middle section with user's name -->
-        <div class="d-flex align-items-center mx-auto">
-            <span class="navbar-text me-3">
-                <h4>Hello, <?= $user->first_name ?>
-            </span>
-            </h5>
-        </div>
 
         <!-- Right-aligned Logout button -->
         <div class="d-flex align-items-center">
