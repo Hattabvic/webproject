@@ -119,42 +119,35 @@ $likes = $user->All_likes($_REQUEST["post_id"]);
 
 <body>
 
-  <?php
-  $likeCount = 0;
+<?php
+$likeCount = 0; 
 
-  if (!empty($likes)) {
-    $likeCount = count($likes);
+if (!empty($likes)) {
+  $likeCount = count($likes); 
 
-    foreach ($likes as $like) {
-      $user1 = $user->getUser($like["user_id"]);
-      if (!empty($user1)) {
-        $userData = $user1[0];
-        ?>
-        <div class="container border border-danger-subtle p-4 rounded m-4 ">
-          <div class=" d-flex m-4 p-4  ">
-            <img
-              src="<?= empty($userData["image"]) ? 'https://t4.ftcdn.net/jpg/02/34/57/59/240_F_234575931_hDnNJiXNgTzJO4iDDZjhneWKF25o7O2f.jpg' : $userData["image"]; ?>"
-              alt="avatar" class="rounded-circle flex-shrink-0 profile-img">
-            <div>
-              <h6 class="mb-0 profile-info mx-2"><?= $userData["first_name"] . " " . $userData["last_name"] ?></h6>
-              <small class="text-muted mx-2"><?= $userData["created_at"] ?></small>
-            </div>
-          </div>
-          <?php
-      }
-    }
-  }
-  ?>
-    <div class="col-8 offset-1">
-      <i class="bi bi-heart "></i>
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart text-danger"
-        viewBox="0 0 16 16">
-        <path
-          d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
-      </svg>
-      <span class="like-count text-danger">Total Likes: <?= $likeCount ?></span>
+  foreach ($likes as $like) {
+    $user1 = $user->getUser($like["user_id"]);
+    if (!empty($user1)) {
+      $userData = $user1[0];
+?>
+  <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-2">
+    <div class="d-flex gap-3 w-100 align-items-center">
+      <img src="<?= empty($userData["image"]) ? 'https://t4.ftcdn.net/jpg/02/34/57/59/240_F_234575931_hDnNJiXNgTzJO4iDDZjhneWKF25o7O2f.jpg' : $userData["image"]; ?>" alt="avatar" class="rounded-circle flex-shrink-0 profile-img">
+      <div>
+        <h6 class="mb-0 profile-info"><?= $userData["first_name"]." ". $userData["last_name"] ?></h6>
+        <small class="text-muted"><?= $userData["created_at"] ?></small>
+      </div>
     </div>
   </div>
+<?php
+    }
+  }
+}
+?>
+<div class="d-flex justify-content-end p-4">
+  <span class="like-count">Total Likes: <?= $likeCount ?></span>
+</div>
+
 
 
   <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>

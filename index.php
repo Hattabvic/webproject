@@ -192,7 +192,7 @@
       ?>
         <div class="alert alert-warning" role="alert">
           <div class="alert-icon">⚠️</div>
-          <strong>No User</strong><br> Enter Corecte Data OR <br><a href="register.php">Sing Up</a>
+          <strong>No User</strong><br> Enter Correct Data OR <br><a href="register.php">Sing Up</a>
         </div>
         <script type="text/javascript">
           setTimeout(function() {
