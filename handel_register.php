@@ -9,8 +9,8 @@ if (empty($_REQUEST['pw']) || empty($_REQUEST['pc'])) $errors['pw-pc'] = 'The pa
 if (empty($_REQUEST['email'])) $errors['email'] = 'Email is required';
 if ($_REQUEST['pw'] != $_REQUEST['pc']) $errors['password_ditection'] = 'The password conforamtion not match with password';
 if (!empty($_REQUEST['email']) && !filter_var($_REQUEST['email'], FILTER_VALIDATE_EMAIL)) $errors['email'] = 'email not corect add @ ';
-if (strlen($_REQUEST['pw']) < 8) {
-    $errors['pw_short'] = 'The password must be at least 8 characters long';
+if (strlen($_REQUEST['pw']) < 6) {
+    $errors['pw_short'] = 'The password must be at least 6 characters long';
 }
 
 $first_name = htmlspecialchars(trim($_REQUEST['first_name']));

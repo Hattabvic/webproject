@@ -155,7 +155,7 @@ class Subscriber extends User
     }
     public static function All_likes($post_id)
     {
-        $qry = "SELECT * FROM likes WHERE post_id = $post_id ORDER BY CREATED_AT DESC";
+        $qry = "SELECT * FROM likes WHERE post_id = $post_id ";
         require_once('configration.php');
         $connect = mysqli_connect(DB_HOST, DB_USER_NAME, DB_USER_PASSWORD, DB_NAME);
         $rslt = mysqli_query($connect, $qry);

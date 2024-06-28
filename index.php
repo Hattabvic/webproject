@@ -174,16 +174,10 @@
       if (!empty($_GET['msg_login']) && $_GET['msg_login'] == 'al') {
       ?>
         <div class="alert alert-warning" role="alert">
-          <div class="alert-icon">⚠️</div>
-          <strong>Warning</strong><br> Error In Login..!
+          <div class="alert-icon"></div>
+          <strong>⚠️ Warning</strong><br> Please Enter Your Information
         </div>
-        <script type="text/javascript">
-          setTimeout(function() {
-            var url = new URL(window.location.href);
-            url.searchParams.delete('msg_login');
-            window.location.href = url.href;
-          }, 3000);
-        </script>
+     
       <?php
       }
       ?>
@@ -191,16 +185,10 @@
       if (!empty($_GET['msg_login']) && $_GET['msg_login'] == 'no-req') {
       ?>
         <div class="alert alert-warning" role="alert">
-          <div class="alert-icon">⚠️</div>
-          <strong>No User</strong><br> Enter Correct Data OR <br><a href="register.php">Sing Up</a>
+          <div class="alert-icon"></div>
+          <strong>⚠️ No User</strong><br>Please Enter Correct Data <br>Or<a href="register.php">Sing Up</a>
         </div>
-        <script type="text/javascript">
-          setTimeout(function() {
-            var url = new URL(window.location.href);
-            url.searchParams.delete('msg_login');
-            window.location.href = url.href;
-          }, 3000);
-        </script>
+  
       <?php
       }
       ?>

@@ -14,7 +14,7 @@ $likes = $user->All_likes($_REQUEST["post_id"]);
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.122.0">
-  <title>Elfaky</title>
+  <title>All Likes</title>
   <link rel="shortcut icon" href="./image/logo.png" type="image/x-icon" />
   <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/list-groups/">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">

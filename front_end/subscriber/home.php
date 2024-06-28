@@ -6,7 +6,7 @@ $user = unserialize($_SESSION["user"]);
 $homePosts = $user->home_post();
 // $my_posts = $user->myposts($user->id);
 
-$assets = "../../assets";
+$assets = "../assets";
 // var_dump($homePosts);
 ?>
 <!doctype html>
@@ -217,11 +217,11 @@ $assets = "../../assets";
                                         <div class="post-heading  m-4">
                                             <div class="  ">
                                                 <img style="width:50px ; height: 50px; border-radius:50px;"
-                                                    src="<?php if (!empty($user->image))
-                                                        echo $user->image;
+                                                    src="<?php if (!empty($posts["user_image"]))
+                                                        echo $posts["user_image"];
                                                     else
                                                         echo 'https://t4.ftcdn.net/jpg/02/34/57/59/240_F_234575931_hDnNJiXNgTzJO4iDDZjhneWKF25o7O2f.jpg' ?>">
-                                                    <h6 class="mb-0"><?= $user->first_name ?><?= " " . $user->last_name ?></h6>
+                                                    <h6 class="mb-0"><?= $posts["first_name"] ?><?= " " .$posts["last_name"] ?></h6>
                                                 <br>
                                                 <h6 class=""> <span><?= $posts["created_at"] ?></span></h6>
                                             </div>
@@ -267,6 +267,7 @@ $assets = "../../assets";
 
                                 <div class="action">
                                     <a role="button" href="All_like.php?post_id=<?= $posts["id"] ?>" class="btn">
+                                        
                                         <i class="fa-solid fa-users-between-lines"></i>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="fa-solid fa-users-between-lines" viewBox="0 0 640 512">
 
@@ -297,10 +298,10 @@ $assets = "../../assets";
                                     ?>
                                         <li class="comment">
                                             <div class="card mb-4">
-                                                <div class="card-body">
-                                                    <p><?= $comment["comment"] ?></p>
+                                                <div class="card-body bg-light">
                                                     <div class="d-flex justify-content-between">
                                                         <div class="d-flex flex-row align-items-center">
+
                                                             <img style="border-radius: 50%;" src="<?= empty($comment['image']) ? 'https://t4.ftcdn.net/jpg/02/34/57/59/240_F_234575931_hDnNJiXNgTzJO4iDDZjhneWKF25o7O2f.jpg' : $comment['image']; ?>" alt="avatar" width="25" height="25" />
                                                             <p class="small mb-0 ms-2"><?= $comment["first_name"] . " " . $comment["last_name"] ?></p>
                                                         </div>
@@ -308,6 +309,10 @@ $assets = "../../assets";
                                                             <p class="small text-muted mb-0"><?= $comment["created_at"] ?></p>
                                                         </div>
                                                     </div>
+                                                   
+                                                   <div class="ms-3 mt-3 ps-3 pt-3 bg-white border border-secondary-subtle rounded">
+                                                   <p><?= $comment["comment"] ?></p>
+                                                   </div>
                                                 </div>
                                             </div>
                                         </li>
