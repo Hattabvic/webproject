@@ -5,10 +5,10 @@ $user = unserialize ($_SESSION["user"]);
 if (!empty($_REQUEST["like"])) {
     if (empty($user->myLike($_REQUEST["post_id"], $user->id))) {
         $user->store_like($_REQUEST["like"],$user->id,$_REQUEST["post_id"]);
-        header("location:profile.php?msg =like_done");
+        header("location:profile.php?msg=like_done");
     } else{
         $user->unlike($user->id,$_REQUEST["post_id"]);
-        header("location:profile.php?msg =unlike_done");
+        header("location:profile.php?msg=unlike_done");
     }
 
 }else{
