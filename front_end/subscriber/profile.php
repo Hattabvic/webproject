@@ -281,7 +281,7 @@ $my_posts = $user->myposts($user->id);
                                                 echo 'https://t4.ftcdn.net/jpg/02/34/57/59/240_F_234575931_hDnNJiXNgTzJO4iDDZjhneWKF25o7O2f.jpg' ?>" alt="..." width="130" class="rounded mb-2 img-thumbnail"><a href="edit_profile.php" class="btn btn-dark btn-sm btn-block">Edit profile</a>
                             </div>
                             <div class="media-body mb-5 text-white p-2">
-                                <h4 class="mb-2 mx-3"><?= $user->first_name ?></h4>
+                                <h4 class="mb-2 mx-3"><?= $user->first_name . " " . $user->last_name?></h4>
                                 <span class="text-white d-block mb-2 mx-1">( <?= $user->role ?> )</span>
 
                             </div>
