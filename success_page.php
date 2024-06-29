@@ -82,9 +82,9 @@
                     <div class="alert-icon">✔️</div>
                     <div class="alert-content">
                         <strong>Sign-in is successfully </strong> <br>
-                        
+
                         You will be redirected to the login page shortly.<br>
-                       <br>
+                        <br>
                     </div>
                 </div>
 
@@ -105,9 +105,7 @@
                     <div class="alert-icon">✔️</div>
                     <div class="alert-content">
                         <strong>Done</strong> <br>
-                        
                         You will be redirected to login page in 2 seconds... <br>
-
                     </div>
                 </div>
 
@@ -127,13 +125,11 @@
                 <div class="alert alert-success" role="alert">
                     <div class="alert-icon">✔️</div>
                     <div class="alert-content">
-                        <strong>  Edit profile is Successfully </strong>
-                      <br>
+                        <strong> Edit profile is Successfully </strong>
+                        <br>
                         You will be redirected to login page in 2 seconds... <br>
-
                     </div>
                 </div>
-
                 <script type="text/javascript">
                     setTimeout(function() {
                         window.location.href = 'front_end/subscriber/profile.php';
@@ -152,7 +148,6 @@
                     <div class="alert-content">
                         <strong>Delete Account is Done</strong> <br>
                         You will be redirected to login page in 2 seconds... <br>
-
                     </div>
                 </div>
 
@@ -177,7 +172,6 @@
 
                     </div>
                 </div>
-
                 <script type="text/javascript">
                     setTimeout(function() {
                         window.location.href = 'front_end/subscriber/profile.php';
@@ -189,7 +183,6 @@
             </span> <br>
         </div>
         </div>
-
 
         </div>
         <div class="container">
@@ -204,7 +197,6 @@
 
                     </div>
                 </div>
-
                 <script type="text/javascript">
                     setTimeout(function() {
                         window.location.href = 'front_end/admin/dashboard/home.php';
@@ -217,7 +209,6 @@
         </div>
         </div>
 
-
         </div>
         <div class="container">
             <?php
@@ -228,10 +219,8 @@
                     <div class="alert-content">
                         <strong>✅ The user has been unblocked</strong> <br>
                         You will be redirected to login page in 2 seconds... <br>
-
                     </div>
                 </div>
-
                 <script type="text/javascript">
                     setTimeout(function() {
                         window.location.href = 'front_end/admin/dashboard/home.php';

@@ -12,7 +12,6 @@ abstract class User
     public $created_at;
     public $updated_at;
     public $is_banned;
-
     function __construct($id, $first_name, $last_name, $email, $image, $password, $phone, $created_at, $updated_at, $is_banned)
     {
         $this->id = $id;
@@ -26,7 +25,6 @@ abstract class User
         $this->image =  $image;
         $this->is_banned =  $is_banned;
     }
-
     public static function login($email, $password)
     {
         $user = null;
@@ -96,7 +94,6 @@ class Subscriber extends User
         mysqli_close($connect);
         return $data;
     }
-
     public static function update_profile($imagePath, $user_id)
     {
         $qry = "UPDATE USERS SET IMAGE = '$imagePath' WHERE id=$user_id";
@@ -106,9 +103,6 @@ class Subscriber extends User
         mysqli_close($connect);
         return $rslt;
     }
-
-
-
     public static function home_post()
     {
         $qry = "SELECT posts.*, users.image as user_image, users.first_name, users.last_name FROM posts 
@@ -124,13 +118,10 @@ class Subscriber extends User
     public function get_post_comment($post_id)
     {
         $qry = "SELECT * FROM COMMENTS JOIN USERS ON COMMENTS.USER_ID=USERS.ID WHERE POST_ID=$post_id ORDER BY COMMENTS.CREATED_AT DESC";
-
         require_once('configration.php');
         $connect = mysqli_connect(DB_HOST, DB_USER_NAME, DB_USER_PASSWORD, DB_NAME);
-
         $rslt = mysqli_query($connect, $qry);
         $data = mysqli_fetch_all($rslt, MYSQLI_ASSOC);
-
         mysqli_close($connect);
         return $data;
     }
@@ -219,7 +210,6 @@ class Admin extends User
         mysqli_close($connect);
         return $count;
     }
-
     public function get_user_comments_count($user_id)
     {
         $qry = "SELECT COUNT(*) FROM comments WHERE user_id = $user_id";
@@ -262,7 +252,6 @@ class Admin extends User
         mysqli_close($connect);
         return $rslt;
     }
-
     public function ban_user($user_id)
     {
         $qry = "UPDATE USERS SET is_banned = 1 WHERE id = $user_id";
@@ -272,7 +261,6 @@ class Admin extends User
         mysqli_close($connect);
         return $rslt;
     }
-
     public function unban_user($user_id)
     {
         $qry = "UPDATE USERS SET is_banned = 0 WHERE id = $user_id";

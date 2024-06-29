@@ -210,36 +210,37 @@ session_start()
             <?php
             }
             ?>
-           <b><small style="color:crimson"><?php if (isset($_SESSION["errors"]['first name'])) echo $_SESSION["errors"]['first name'] ?></small></b><br>
+          <p><small style="color:crimson"><?php if (isset($_SESSION["errors"]['first name'])) echo $_SESSION["errors"]['first name'] ?></small></b></p>
             <div class="form-floating">
                 <input type="text" name="first_name" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">First Name</label>
             </div>
-            <b><small style="color:crimson;"><?php if (isset($_SESSION['errors']['last name'])) echo $_SESSION['errors']['last name'] ?></small></b><br>
+           <p><small style="color:crimson;"><?php if (isset($_SESSION['errors']['last name'])) echo $_SESSION['errors']['last name'] ?></small></b></p>
             <div class="form-floating">
                 <input type="text" name="last_name" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Last Name</label>
             </div>
-            <b><small style="color:crimson;"><?php if (isset($_SESSION['errors']['email'])) echo $_SESSION['errors']['email'] ?></small></b><br>
+           <p><small style="color:crimson;"><?php if (isset($_SESSION['errors']['email'])) echo $_SESSION['errors']['email'] ?></small></b></p>
             <div class="form-floating">
                 <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Email address</label>
             </div>
-            <b><small style="color:crimson;"><?php if (isset($_SESSION['errors']['phone_lose'])) echo $_SESSION['errors']['phone_lose'] ?></small></b><br>
-            <b><small style="color:crimson;"><?php if (isset($_SESSION['errors']['phone'])) echo $_SESSION['errors']['phone'] ?></small></b><br>
+           <p><small style="color:crimson;"><?php if (isset($_SESSION['errors']['phone_lose'])) echo $_SESSION['errors']['phone_lose'] ?></small></b></p>
+           <p><small style="color:crimson;"><?php if (isset($_SESSION['errors']['phone'])) echo $_SESSION['errors']['phone'] ?></small></b></p>
             <div class="form-floating">
                 <input type="number" name="phone" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Phone Number</label>
             </div>
-            <b><small style="color:crimson;"><?php if (isset($_SESSION['errors']['pw_pc'])) echo $_SESSION['errors']['pw_pc'] ?></small></b><br>
-            <b><small style="color: crimson;"><?php if (isset($_SESSION['errors']['pw_long'])) echo $_SESSION['errors']['pw_long'] ?></small></b><br>
-            <b><small style="color:crimson;"><?php if (isset($_SESSION['errors']['password_ditection'])) echo $_SESSION['errors']['password_ditection'] ?></small></b><br>
+           <p><small style="color:crimson;"><?php if (isset($_SESSION['errors']['pw-pc'])) echo $_SESSION['errors']['pw-pc'] ?></small></b></p>
+           <p><small style="color: crimson;"><?php if (isset($_SESSION['errors']['pw_long'])) echo $_SESSION['errors']['pw_long'] ?></small></b></p>
+           <p><small style="color: crimson;"><?php if (isset($_SESSION['errors']['pw_short'])) echo $_SESSION['errors']['pw_short'] ?></small></b></p>
+           <p><small style="color:crimson;"><?php if (isset($_SESSION['errors']['password_ditection'])) echo $_SESSION['errors']['password_ditection'] ?></small></b></p>
             <div class="form-floating">
                 <input type="password" name="pw" class="form-control" id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">Password</label>
             </div>
-            <b><small style="color:crimson;"><?php if (isset($_SESSION['errors']['pw_pc'])) echo $_SESSION['errors']['pw_pc'] ?></small></b><br>
-            <b><small style="color:crimson;"><?php if (isset($_SESSION['errors']['password_ditection'])) echo $_SESSION['errors']['password_ditection'] ?></small></b><br>
+           <p><small style="color:crimson;"><?php if (isset($_SESSION['errors']['pw-pc'])) echo $_SESSION['errors']['pw-pc'] ?></small></b></p>
+           <p><small style="color:crimson;"><?php if (isset($_SESSION['errors']['password_ditection'])) echo $_SESSION['errors']['password_ditection'] ?></small></b></p>
             <div class="form-floating">
                 <input type="password" name="pc" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">password confirmation</label>

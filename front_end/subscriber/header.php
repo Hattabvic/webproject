@@ -1,6 +1,6 @@
 <?php
 
-require_once ("../../classes.php");
+require_once("../../classes.php");
 if (empty($user = unserialize($_SESSION["user"]))) {
     header("location:../../index.php?msg=filed_authentcation");
 }
@@ -114,9 +114,7 @@ $assets = "../../assets";
         <!-- Left links -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <div class="pull-left image ">
-                <img style="border-radius: 60%;"
-                    src="<?= empty($posts['user_image']) ? 'https://t4.ftcdn.net/jpg/02/34/57/59/240_F_234575931_hDnNJiXNgTzJO4iDDZjhneWKF25o7O2f.jpg' : $posts['user_image']; ?>"
-                    alt="avatar" width="50" height="50" />
+                <img style="border-radius: 60%;" src="<?= empty($user->image) ? 'https://t4.ftcdn.net/jpg/02/34/57/59/240_F_234575931_hDnNJiXNgTzJO4iDDZjhneWKF25o7O2f.jpg' : $user->image; ?>" alt="avatar" width="50" height="50" />
             </div>
             <li class="nav-item">
                 <a class="nav-link text-lg" href="home.php">
@@ -134,8 +132,7 @@ $assets = "../../assets";
 
         <!-- Right-aligned Logout button -->
         <div class="d-flex align-items-center">
-            <a type="button" href="../../handel_logout.php?msg=logout" data-mdb-ripple-init type="button"
-                class="btn btn-danger me-3">
+            <a type="button" href="../../handel_logout.php?msg=logout" data-mdb-ripple-init type="button" class="btn btn-danger me-3">
                 Logout
             </a>
         </div>
